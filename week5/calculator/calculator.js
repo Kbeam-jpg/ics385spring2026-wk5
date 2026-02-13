@@ -41,12 +41,21 @@ app.post("/bmiCalculator", function(req, res){
   var height = parseFloat(req.body.height);
 
 // does the computation of the input variables, as numbers
-  var bmi = weight / (height * weight);
+  var bmi = weight / (height * height);
 
 //display the result in 2 decimal places
 res.send("Your BMI is " + bmi.toFixed(2));
 
 })
+
+//####
+
+// 
+app.get("/f2c", function(req, res){
+  res.sendFile(__dirname + "/f2c.html");
+});
+
+//####
 
 app.listen(3000, function() {
   console.log ("Server is running on port 3000")
