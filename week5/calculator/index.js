@@ -1,3 +1,15 @@
+/* INFO
+Name: Kendall Beam
+Date: Feb 13 2026
+Course: ICS 385 Week 5c
+File: index.js (main)
+Purpose: 
+- Use express to handle 2 get/post html requests
+- implement a basic function
+- see VolCalculator.html
+
+AI Use: none
+*/
 const express = require("express");
 const app = express();
 const PORT = 3001;
@@ -24,7 +36,7 @@ app.post("/VolCalc", function (req, res) {
 
   let vol = pi * Math.pow(r, 2) * h;
 
-  // display as field on webpage
+  //display as field on seperate page
   //format result to 2 decimal places
   res.send(`Volume = ${vol.toFixed(2)}`);
 });
